@@ -1,0 +1,94 @@
+<mxfile host="Electron" modified="2023-12-10T18:39:26.485Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.1.2 Chrome/114.0.5735.289 Electron/25.9.4 Safari/537.36" etag="saTVW2PMXO8wN0TT1-Gr" version="22.1.2" type="device">
+  <diagram name="Page-1" id="RKqwD6AIDO6lgbxaLkhe">
+    <mxGraphModel dx="1644" dy="476" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="VQgReexzS6vkKsmonLoG-8" value="Get # of trades, min price, max price, and volume for each window" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;fontColor=#000000;darkOpacity=0.05;fillColor=#FFF9B2;strokeColor=none;fillStyle=solid;direction=west;gradientDirection=north;gradientColor=#FFF2A1;shadow=1;size=20;pointerEvents=1;" parent="1" vertex="1">
+          <mxGeometry x="220" y="30" width="140" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="a_A3023GUtWrYLt6G-1_-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="a_A3023GUtWrYLt6G-1_-1" target="a_A3023GUtWrYLt6G-1_-2" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a_A3023GUtWrYLt6G-1_-1" value="Source [Records of Stock Trades]" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+          <mxGeometry x="170" y="230" width="110" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="a_A3023GUtWrYLt6G-1_-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="a_A3023GUtWrYLt6G-1_-2" target="a_A3023GUtWrYLt6G-1_-5" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a_A3023GUtWrYLt6G-1_-2" value="Generate Multiple Records from Input Records" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+          <mxGeometry x="170" y="380" width="110" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="a_A3023GUtWrYLt6G-1_-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="a_A3023GUtWrYLt6G-1_-5" target="a_A3023GUtWrYLt6G-1_-6" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a_A3023GUtWrYLt6G-1_-5" value="Group Records by Ticker Symbol" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+          <mxGeometry x="170" y="530" width="110" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="a_A3023GUtWrYLt6G-1_-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="a_A3023GUtWrYLt6G-1_-6" target="a_A3023GUtWrYLt6G-1_-8" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a_A3023GUtWrYLt6G-1_-6" value="Group Records by Time Window" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+          <mxGeometry x="170" y="670" width="110" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="a_A3023GUtWrYLt6G-1_-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="a_A3023GUtWrYLt6G-1_-8" target="a_A3023GUtWrYLt6G-1_-9" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a_A3023GUtWrYLt6G-1_-8" value="Aggregate Records" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+          <mxGeometry x="350" y="230" width="110" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="a_A3023GUtWrYLt6G-1_-9" value="Sink [Stocks Statistics]" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+          <mxGeometry x="350" y="380" width="110" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="a_A3023GUtWrYLt6G-1_-12" value="DZE,BUY;34;10" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;strokeWidth=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" parent="1" vertex="1">
+          <mxGeometry x="60" y="340" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="a_A3023GUtWrYLt6G-1_-13" value="DZE,&quot;&quot;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;strokeWidth=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" parent="1" vertex="1">
+          <mxGeometry x="-50" y="477" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="a_A3023GUtWrYLt6G-1_-14" value="DZE, 34Max" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;strokeWidth=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" parent="1" vertex="1">
+          <mxGeometry x="-50" y="507" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="a_A3023GUtWrYLt6G-1_-15" value="DZE, 34Min" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;strokeWidth=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" parent="1" vertex="1">
+          <mxGeometry x="60" y="477" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="a_A3023GUtWrYLt6G-1_-16" value="DZE, 10" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;strokeWidth=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" parent="1" vertex="1">
+          <mxGeometry x="60" y="507" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="a_A3023GUtWrYLt6G-1_-21" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="a_A3023GUtWrYLt6G-1_-17" target="a_A3023GUtWrYLt6G-1_-18" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a_A3023GUtWrYLt6G-1_-17" value="DZE,&quot;&quot;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;strokeWidth=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" parent="1" vertex="1">
+          <mxGeometry x="-50" y="620" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="a_A3023GUtWrYLt6G-1_-18" value="DZE, 34Max" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;strokeWidth=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" parent="1" vertex="1">
+          <mxGeometry x="-50" y="650" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="a_A3023GUtWrYLt6G-1_-19" value="DZE, 34Min" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;strokeWidth=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" parent="1" vertex="1">
+          <mxGeometry x="60" y="620" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="a_A3023GUtWrYLt6G-1_-20" value="DZE, 10" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;strokeWidth=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" parent="1" vertex="1">
+          <mxGeometry x="60" y="650" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="a_A3023GUtWrYLt6G-1_-26" value="DZE : [34 Trades, Min Price: 34PHP, Max Price: 34PHP, Volume: 10 Shares]" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;strokeWidth=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" parent="1" vertex="1">
+          <mxGeometry x="460" y="320.5" width="140" height="69" as="geometry" />
+        </mxCell>
+        <mxCell id="a_A3023GUtWrYLt6G-1_-27" value="DZE,&quot;&quot;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;strokeWidth=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" parent="1" vertex="1">
+          <mxGeometry x="440" y="170" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="a_A3023GUtWrYLt6G-1_-28" value="DZE, 34Max" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;strokeWidth=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" parent="1" vertex="1">
+          <mxGeometry x="440" y="200" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="a_A3023GUtWrYLt6G-1_-29" value="DZE, 34Min" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;strokeWidth=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" parent="1" vertex="1">
+          <mxGeometry x="550" y="170" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="a_A3023GUtWrYLt6G-1_-30" value="DZE, 10" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;strokeWidth=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" parent="1" vertex="1">
+          <mxGeometry x="550" y="200" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="a_A3023GUtWrYLt6G-1_-33" value="Input: TYPE, Price, Shares" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;fontColor=#000000;darkOpacity=0.05;fillColor=#FFF9B2;strokeColor=none;fillStyle=solid;direction=west;gradientDirection=north;gradientColor=#FFF2A1;shadow=1;size=20;pointerEvents=1;" parent="1" vertex="1">
+          <mxGeometry x="60" y="180" width="90" height="120" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
